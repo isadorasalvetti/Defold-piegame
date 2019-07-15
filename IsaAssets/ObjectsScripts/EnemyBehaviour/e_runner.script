@@ -1,0 +1,32 @@
+go.property("speed", 5)
+
+function init(self)
+	self.moveCoolDown = 0
+	self.maxCoolDown = 0.25
+	self.retreatSpeed = 35
+end
+
+function update(self, dt)	
+	ppos = go.get("Player", "position")
+	pos = go.get_position()
+	self.dir = ppos - pos
+	self.dir = vmath.normalize(self.dir)
+	
+	if self.moveCoolDown > 0 then
+		self.moveCoolDown = self.moveCoolDown - dt
+		pos = pos - self.dir * self.retreatSpeed * dt
+	else
+		pos = pos + self.dir * self.speed * dt
+	end
+	pos.z = 0
+	go.set_position(pos)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("collision_response") then
+		if message["group"] == hash("player") and self.moveCoolDown<= 0 then
+			self.moveCoolDown = self.maxCoolDown
+		end
+	end
+end
+	

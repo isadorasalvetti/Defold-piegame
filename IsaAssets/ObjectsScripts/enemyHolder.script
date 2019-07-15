@@ -1,0 +1,32 @@
+function init(self)
+	self.enemyList = {}
+end
+
+function on_message(self, message_id, message, sender)
+	print(message_id)
+	if message_id == hash("addEnemy") then
+		self.enemyList[sender.path] = true
+	elseif message_id == hash("deathEnemy") then
+		self.enemyList[sender.path] = nil
+		sendClosestEnemy(self)
+	elseif message_id == (hash("getClosestEnemy")) then
+		sendClosestEnemy(self)
+	end
+end
+
+function sendClosestEnemy(self)
+	ppos = go.get("Player", "position")
+	minDist = math.huge
+
+	self.target = nil
+
+	for k, v in pairs(self.enemyList) do
+		dist = vmath.length_sqr(ppos - go.get_position(k))
+		if dist < minDist then
+			minDist = dist
+			self.target = k
+		end
+	end
+
+	msg.post("Player#player", "setTarget", {target=self.target})
+end

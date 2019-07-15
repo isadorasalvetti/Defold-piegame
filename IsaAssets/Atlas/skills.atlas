@@ -1,0 +1,47 @@
+animations {
+  id: "BlastSmall"
+  images {
+    image: "/IsaAssets/Skills/S_BlastSmall1.png"
+  }
+  images {
+    image: "/IsaAssets/Skills/S_BlastSmall2.png"
+  }
+  images {
+    image: "/IsaAssets/Skills/S_BlastSmall3.png"
+  }
+  images {
+    image: "/IsaAssets/Skills/S_BlastSmall4.png"
+  }
+  images {
+    image: "/IsaAssets/Skills/S_BlastSmall5.png"
+  }
+  images {
+    image: "/IsaAssets/Skills/S_BlastSmall6.png"
+  }
+  playback: PLAYBACK_ONCE_FORWARD
+  fps: 8
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "BulletSmall"
+  images {
+    image: "/IsaAssets/Skills/S_BulletSmall1.png"
+  }
+  images {
+    image: "/IsaAssets/Skills/S_BulletSmall2.png"
+  }
+  images {
+    image: "/IsaAssets/Skills/S_BulletSmall3.png"
+  }
+  images {
+    image: "/IsaAssets/Skills/S_BulletSmall4.png"
+  }
+  playback: PLAYBACK_LOOP_PINGPONG
+  fps: 8
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0

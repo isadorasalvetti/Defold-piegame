@@ -1,0 +1,15 @@
+go.property("collisionDmg", 6)
+
+function init(self)
+	msg.post("Enemies#enemyHolder", "addEnemy")
+end
+
+function on_message(self, message_id, message, sender)
+	--Collisions
+	if message_id == hash("collision_response") then
+		if message["group"] == hash("bullet") then
+			msg.post("Enemies#enemyHolder", "deathEnemy")
+			go.delete()
+		end
+	end
+end

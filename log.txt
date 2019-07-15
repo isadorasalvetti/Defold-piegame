@@ -1,0 +1,8 @@
+INFO:DLIB: Writing log to: ./log.txt
+INFO:ENGINE: Loading data from: build/default
+INFO:ENGINE: Initialised sound device 'default'
+
+DEBUG:SCRIPT: hash: [addEnemy]
+DEBUG:SCRIPT: hash: [addEnemy]
+INFO:DLIB: SSDP: Started on address 192.168.1.30
+INFO:DLIB: SSDP: Done on address 192.168.1.30

@@ -1,0 +1,25 @@
+go.property("yoffset", 11)
+
+function init(self)
+	self.scale = go.get_scale()
+	self.initXScale = self.scale.x
+
+	-- this should not be necessary! Check why this happens.
+	self.position = go.get_position()
+	self.position.y = self.yoffset
+	self.position.z = 1
+	go.set_position(self.position)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("updateHealth") then
+		updateHealth(self, message.percent)
+	end
+end
+
+function updateHealth(self, percent)
+	self.scale.x = math.max(self.initXScale*percent, 0.00001)
+	go.set_scale(self.scale)
+	self.position.x = -self.initXScale*(1-percent)/2
+	go.set_position(self.position)
+end

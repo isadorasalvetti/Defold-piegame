@@ -1,0 +1,119 @@
+animations {
+  id: "Forward"
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_F1.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_F2.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_F1.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_F3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 8
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "Right"
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S1.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S2.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S1.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 8
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "Left"
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S1.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S2.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S1.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 8
+  flip_horizontal: 1
+  flip_vertical: 0
+}
+animations {
+  id: "Back"
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_B1.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_B2.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_B1.png"
+  }
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_B3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 8
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "IddleF"
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_F1.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 0
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "IddleR"
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S1.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 0
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "IddleL"
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_S1.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 0
+  flip_horizontal: 1
+  flip_vertical: 0
+}
+animations {
+  id: "IddleB"
+  images {
+    image: "/IsaAssets/Characters/C_Whitch_B1.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 0
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

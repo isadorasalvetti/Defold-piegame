@@ -1,0 +1,44 @@
+name: "hpBar"
+vertex_program: "/IsaAssets/Render/sprite.vp"
+fragment_program: "/IsaAssets/Render/hpBar.fp"
+vertex_space: VERTEX_SPACE_WORLD
+vertex_constants {
+  name: "view_proj"
+  type: CONSTANT_TYPE_VIEWPROJ
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+fragment_constants {
+  name: "percent"
+  type: CONSTANT_TYPE_USER
+  value {
+    x: 0.5
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+fragment_constants {
+  name: "pixels"
+  type: CONSTANT_TYPE_USER
+  value {
+    x: 16.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+fragment_constants {
+  name: "col"
+  type: CONSTANT_TYPE_USER
+  value {
+    x: 0.5
+    y: 0.5
+    z: 0.5
+    w: 1.0
+  }
+}

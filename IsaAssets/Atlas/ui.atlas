@@ -1,0 +1,9 @@
+images {
+  image: "/IsaAssets/UI/HealthBar.png"
+}
+images {
+  image: "/IsaAssets/UI/HealthBarFill.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

@@ -1,0 +1,29 @@
+go.property("dir", vmath.vector3())                 -- [1]
+
+function init(self)
+	self.speed = 200                                -- [2]
+	self.life = 5
+end
+
+function update(self, dt)
+	local pos = go.get_position()                   -- [3]
+	pos = pos + self.dir * self.speed * dt          -- [4]
+	go.set_position(pos)                            -- [5]
+
+	self.life = self.life - dt                              -- [1]
+	if self.life < 0 then                                   -- [2]
+		self.life = 1000                                    -- [3]
+		go.set_rotation(vmath.quat())                       -- [4]
+		self.speed = 0                                      -- [5]
+		msg.post("#sprite", "play_animation", {id = hash("BlastSmall")}) -- [6]
+	end
+end
+
+function on_message(self, message_id, message, sender)      -- [1]
+	if message_id == hash("animation_done") then            -- [2]
+		go.delete()                                         -- [3]
+	elseif message_id == hash("collision_response") then
+		self.speed = 0
+		msg.post("#sprite", "play_animation", {id = hash("BlastSmall")}) -- [6]
+	end
+end
