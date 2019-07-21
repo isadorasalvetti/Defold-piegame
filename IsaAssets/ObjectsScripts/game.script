@@ -3,13 +3,7 @@ go.property("mid", vmath.vector4(0.3, 0.5, 0.5, 1.0))
 go.property("dark", vmath.vector4(0.1, 0.2, 0.2, 1.0))
 
 function init(self)
-	-- Camera follow player
-	msg.post("camera#camera", "acquire_camera_focus")
-	-- set center by substracting half screen resolution
-	go.set_position(vmath.vector3(-512, -256, 0), "camera#camera")
-	msg.post("@render:", "use_fixed_projection", { near = -2, far = 2, zoom = 4 })
-	
-	setColor(self, "Player#sprite", 1)
+	setColor(self, "Player/Player#sprite", 1)
 	setColor(self, "Map#Pic", 0.5)
 end
 

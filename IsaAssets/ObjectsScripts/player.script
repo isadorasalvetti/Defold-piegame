@@ -9,6 +9,14 @@ anim2idle = {Back="IddleB",
 function init(self)
 	msg.post(".", "acquire_input_focus")
 
+	
+	-- Camera follow player
+	msg.post("Camera#camera", "acquire_camera_focus")
+	-- set center by substracting half screen resolution
+	go.set_position(vmath.vector3(-512, -256, 0), "Camera#camera")
+	msg.post("@render:", "use_fixed_projection", { near = -10, far = 10, zoom = 4 })
+	
+
 	self.moving = false
 	-- second to wait before going to idle animation
 	self.idle_delay = 0.2

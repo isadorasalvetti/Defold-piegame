@@ -7,7 +7,7 @@ function init(self)
 end
 
 function update(self, dt)	
-	ppos = go.get("Player", "position")
+	ppos = go.get("Player/Player", "position")
 	pos = go.get_position()
 	self.dir = ppos - pos
 	self.dir = vmath.normalize(self.dir)
